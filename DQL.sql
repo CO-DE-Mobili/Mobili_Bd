@@ -27,3 +27,9 @@ SELECT BIN_TO_UUID(id), nome FROM tb_servico;
 SELECT BIN_TO_UUID(id), nome FROM tb_motorista;
 
 SELECT BIN_TO_UUID(id), nome FROM tb_categoria;
+
+SELECT BIN_TO_UUID(id), nome FROM tb_empresa;
+
+SELECT BIN_TO_UUID(id), nome FROM tb_redes_sociais;
+
+SELECT BIN_TO_UUID(id), nome FROM tb_dias_funcionamento;

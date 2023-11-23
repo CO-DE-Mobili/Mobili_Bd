@@ -54,6 +54,7 @@ INSERT INTO tb_categoria VALUE (UUID_TO_BIN(UUID()), "Troca de Pneus");
 INSERT INTO tb_categoria VALUE (UUID_TO_BIN(UUID()), "Mecânico");
 INSERT INTO tb_categoria VALUE (UUID_TO_BIN(UUID()), "Inspeção Veicular");
 INSERT INTO tb_categoria VALUE (UUID_TO_BIN(UUID()), "Lanche");
+INSERT INTO tb_categoria VALUE (UUID_TO_BIN(UUID()), "Tecnologia");
 
 -- Adicionando dias de funcionamento
 INSERT INTO tb_dias_funcionamento VALUE	(UUID_TO_BIN(UUID()), 'Domingo'); -- domingo
@@ -98,8 +99,32 @@ VALUES (
 
 -- Adicionando os seviços das categorias
 
-INSERT INTO tb_motorista_preferencias
+INSERT INTO tb_servico_categoria
 VALUES (
-    UUID_TO_BIN("a2b76f49-8997-11ee-8ca8-b445067b817e"), -- ID do motorista
-    UUID_TO_BIN("834e184d-8996-11ee-8ca8-b445067b817e")  -- ID da categoria
+    UUID_TO_BIN("548ffbe5-8997-11ee-8ca8-b445067b817e"), -- ID do serviço
+    UUID_TO_BIN("8d443330-8996-11ee-8ca8-b445067b817e")  -- ID da categoria
+);
+
+-- Adicionando a rede social da empresa
+
+INSERT INTO tb_empresa_redes_sociais
+VALUES (
+    UUID_TO_BIN("7e45a8bb-8996-11ee-8ca8-b445067b817e"), -- ID da empresa
+    UUID_TO_BIN("d6e260d3-8996-11ee-8ca8-b445067b817e")  -- ID da rede social
+);
+
+-- Adicionando os dias de funcionamento da empresa
+
+INSERT INTO tb_empresa_funcionamento (id_empresa, id_dia_funcionamento)
+VALUES
+    (UUID_TO_BIN('7e45a8bb-8996-11ee-8ca8-b445067b817e'), UUID_TO_BIN('902e4902-8996-11ee-8ca8-b445067b817e')), -- ID 1
+    (UUID_TO_BIN('7e45a8bb-8996-11ee-8ca8-b445067b817e'), UUID_TO_BIN('941b05d7-8996-11ee-8ca8-b445067b817e')), -- ID 2
+    (UUID_TO_BIN('7e45a8bb-8996-11ee-8ca8-b445067b817e'), UUID_TO_BIN('96926b3f-8996-11ee-8ca8-b445067b817e')); -- ID 3]
+    
+    
+-- Adicionando categoria da empresa
+INSERT INTO tb_empresa_categoria
+VALUES (
+    UUID_TO_BIN("7e45a8bb-8996-11ee-8ca8-b445067b817e"), -- ID da empresa
+    UUID_TO_BIN("be146d16-8a52-11ee-8ca8-b445067b817e")  -- ID da categoria
 );
