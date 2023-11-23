@@ -1,7 +1,12 @@
+
+-- DDL
+
 CREATE DATABASE bd_mobili;
 
 USE bd_mobili;
--- USE bd_mobili;
+
+DROP DATABASE bd_mobili;
+
 CREATE TABLE tb_parceiro(
 id BINARY(16) NOT NULL,
 nome VARCHAR(255) NOT NULL,
@@ -40,7 +45,7 @@ PRIMARY KEY(id)
 
 CREATE TABLE tb_dias_funcionamento(
 id BINARY(16) NOT NULL,
-nome CHAR(1) NOT NULL,
+nome VARCHAR(255) NOT NULL,
 PRIMARY KEY(id)
 );
 
@@ -50,6 +55,7 @@ nome VARCHAR(100) NOT NULL,
 link VARCHAR(255) NOT NULL,
 PRIMARY KEY(id)
 );
+
 
 CREATE TABLE tb_servico(
 id BINARY(16) NOT NULL,
